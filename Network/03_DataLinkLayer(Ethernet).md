@@ -9,14 +9,14 @@
 
 ## 3-2. 2계층에서 사용하는 주소
 1. 물리적인 주소
-    - MAC 주소 : LAN에서 통신할 때 사용
+    - MAC 주소 : LAN에서 통신할 때 사용<br>
         <figure>
         <img src="./imgsrc/MACAddress.PNG" height="150">
         </figure>
 
 ## 3-3. 2계층 프로토콜
 1. Ethernet 프로토콜
-    - LAN에서 통신할 때 사용
+    - LAN에서 통신할 때 사용<br>
         <figure>
         <img src="./imgsrc/EthernetHeader.PNG" height="300">
         </figure>
