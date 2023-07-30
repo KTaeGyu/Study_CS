@@ -21,7 +21,10 @@
 3. 응답
     1. ARP 응답 : 자기 MAC 주소화 함께 Opcode=02 작성
     2. Ethernet 캡슐화 : 목적지 MAC (기존 소스 MAC) 작성
-4. 기존 PC에서 ARP 캐시 테이블에 저장
+4. 기존 PC에서 ARP 캐시 테이블에 저장<br>
+        <figure>
+        <img src="./imgsrc/ARPComm.PNG" width="450">
+        </figure>
 
 ## 5-3. ARP 테이블
 1. 나와 통신했던 컴퓨터들
