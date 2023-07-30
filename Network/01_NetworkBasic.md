@@ -59,5 +59,5 @@
 <br><br>
 
 <figure>
-<img src="./imgsrc/01_networkbasic.png" height="500">
+<img src="./imgsrc/01_networkbasic.png" width="600">
 </figure>

@@ -11,5 +11,5 @@
 <br>
 
 <figure>
-<img src="./imgsrc/04_NetworkLayer(IPAddress)" height="500">
+<img src="./imgsrc/04_NetworkLayer(IPAddress).png" width="600">
 </figure>

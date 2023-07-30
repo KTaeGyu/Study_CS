@@ -28,5 +28,5 @@
 <br>
 
 <figure>
-<img src="./imgsrc/03_DataLinkLayer(Ethernet).png" height="500">
+<img src="./imgsrc/03_DataLinkLayer(Ethernet).png" width="600">
 </figure>
