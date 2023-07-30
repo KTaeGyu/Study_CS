@@ -1,1 +1,0 @@
-![IP Address](./imgsrc/04_IPAddress.png)

@@ -1,1 +1,0 @@
-![Web(HTTP)](./imgsrc/11_Web(HTTP).png)
