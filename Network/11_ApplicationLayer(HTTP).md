@@ -1,3 +1,4 @@
+##### [돌아가기](./README.md)
 # 11. 7계층 (HTTP)
 
 ## 11-1. HTTP 프로토콜
@@ -22,6 +23,30 @@
         </figure>
 
 ## 11-2. HTTP 요청 프로토콜
+1. HTTP 요청 프로토콜의 구조<br>
+        <figure>
+        <img src="./imgsrc/HTTP_Request.PNG" width="400">
+        </figure>
+    1. Request Line : 요청타입, 공백, URI, 공백, HTTP 버전<br>
+        <figure>
+        <img src="./imgsrc/HTTP_RequestLine.PNG" width="250">
+        </figure>
+    2. Headers
+    3. 공백
+    4. Body
+    - 요청 타입들 <br>
+            <figure>
+            <img src="./imgsrc/HTTP_RequestType.PNG" width="350">
+        - GET : 클라이언트가 서버에게 데이터를 요청, 전송도 가능
+        - POST : 클라이언트가 서버에 테이터를 전송, 요청도 가능
+    - GET vs. POST :
+        - GET은 URI에 데이터를 포함시켜서 보내게 되고, POST는 BODY에 포함되어 되돌아온다. 즉, 데이터 보안과 연관되어 있다.
+    - URI : 인터넷 상에서 특정 자원을 나타내는 유일한 주소
+        - scheme://host[:port][/path][?query]
+          - scheme: 프로토콜
+          - host[:port] : IP[:port] or 도메인주소
+          - [/path] : 파일/폴더 경로
+          - [?query] : 파일에 전달할 변수들
 
 ## 11-3. HTTP 응답 프로토콜
 
