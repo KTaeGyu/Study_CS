@@ -12,14 +12,14 @@
 1. 물리적인 주소
     - MAC 주소 : LAN에서 통신할 때 사용<br>
         <figure>
-        <img src="./imgsrc/MACAddress.PNG" height="150">
+        <img src="../imgsrc/MACAddress.PNG" height="150">
         </figure>
 
 ## 3-3. 2계층 프로토콜
 1. Ethernet 프로토콜
     - LAN에서 통신할 때 사용<br>
         <figure>
-        <img src="./imgsrc/EthernetHeader.PNG" height="300">
+        <img src="../imgsrc/EthernetHeader.PNG" height="300">
         </figure>
     - Preamble (8) : 수신 시스템에 프레임의 도착을 알림 (중요X)
     - Destination/Source Address (6, 6) : 목적지와 출발지의 MAC 주소
@@ -29,5 +29,5 @@
 <br>
 
 <figure>
-<img src="./imgsrc/03_DataLinkLayer(Ethernet).png" width="600">
+<img src="../imgsrc/03_DataLinkLayer(Ethernet).png" width="600">
 </figure>

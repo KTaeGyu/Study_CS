@@ -8,7 +8,7 @@
 2. 3계층에서 쓰는 주소
     - IP 주소 : WAN에서 통신할 때 사용<br>
         <figure>
-        <img src="./imgsrc/IPAddress.PNG" width="450">
+        <img src="../imgsrc/IPAddress.PNG" width="450">
         </figure>
 3. 3계층 프로토콜
     - ARP, IPv4, IPv6, ICMP
@@ -16,19 +16,19 @@
 ## 4-2. 일반적인 IP 주소
 1. Classful IP 주소<br>
         <figure>
-        <img src="./imgsrc/ClassfulIPAddress.PNG" width="500">
+        <img src="../imgsrc/ClassfulIPAddress.PNG" width="500">
         </figure>
     - 클래스별로 네트워크 대역을 나눠 **낭비가 심함**
 2. Classless IP 주소<br>
         <figure>
-        <img src="./imgsrc/ClasslessIPAddress.PNG" width="500">
+        <img src="../imgsrc/ClasslessIPAddress.PNG" width="500">
         </figure>
     - 서브넷 마스크를 이용하여 네트워크 대역과 기기를 구분함
 3. 사설IP와 공인IP
     - 사설IP : 같은 네트워크 대역(LAN)에서 사용하는 IP
     - 공인IP : 외부 네트워크 대역(WAN)으로 나갈 때 사용하는 IP<br>
         <figure>
-        <img src="./imgsrc/PrivateIP_PublicIP.PNG" width="280">
+        <img src="../imgsrc/PrivateIP_PublicIP.PNG" width="280">
         </figure>
     - NAT(Network Address Translation)가 필요
 
@@ -42,11 +42,11 @@
     - LAN에서 WAN으로 나갈때 이용하는 IP
     - 사설IP 대역에서 가장 낮거나 가장 높은 IP 주소를 사용<br>
         <figure>
-        <img src="./imgsrc/Gateway.PNG" width="300">
+        <img src="../imgsrc/Gateway.PNG" width="300">
         </figure>
 
 <br>
 
 <figure>
-<img src="./imgsrc/04_NetworkLayer(IPAddress).png" width="600">
+<img src="../imgsrc/04_NetworkLayer(IPAddress).png" width="600">
 </figure>
