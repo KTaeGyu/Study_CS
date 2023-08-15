@@ -7,7 +7,7 @@
     - TCP는 UDP보다 안정적이지만 느리다.
 2. TCP 프로토콜의 구조<br>
         <figure>
-        <img src="./imgsrc/TCP.PNG" width="500">
+        <img src="../imgsrc/TCP.PNG" width="500">
         </figure>
     - Source/Destination Port (2, 2): 포트 번호
     - Sequence Number (4): Seq 번호
@@ -30,7 +30,7 @@
     - **S (Syn Flag)**: 동기화비트. 둘 사이의 연결이 동기화되는 비트.
     - F (Fin Flag): 연결종료비트. 연결 종료시 사용.<br>
         <figure>
-        <img src="./imgsrc/TCP_Flags.PNG" width="400">
+        <img src="../imgsrc/TCP_Flags.PNG" width="400">
         </figure>
 
 
@@ -39,17 +39,17 @@
     - TCP를 이용하는 통신에서 가장 먼저 수행되는 과정
     - 3-Way Handshake: 클라이언트와 서버의 3단계 연결 과정<br>
         <figure>
-        <img src="./imgsrc/3_way_handshake.png" width="400">
+        <img src="../imgsrc/3_way_handshake.png" width="400">
         </figure>
     - 데이터 송수신 과정: Seq, Ack 번호를 그대로 시작<br>
         <figure>
-        <img src="./imgsrc/TCP_Data_Comm.png" width="400">
+        <img src="../imgsrc/TCP_Data_Comm.png" width="400">
         </figure>
     
 ## 9-4. TCP 상태전이도
 1. TCP 연결 상태의 변화<br>
         <figure>
-        <img src="./imgsrc/TCP_Comm_Status.PNG" width="400">
+        <img src="../imgsrc/TCP_Comm_Status.PNG" width="400">
         </figure>
     - Closed : 클라이언트 기본 상태
     - Listen : 서버 기본 상태
@@ -58,11 +58,11 @@
     - Established : 둘 모두 연결된 상태
 2. 3-Way Handshake와 함께 보기<br>
         <figure>
-        <img src="./imgsrc/TCP_Comm_Status_with_3wh.PNG" width="400">
+        <img src="../imgsrc/TCP_Comm_Status_with_3wh.PNG" width="400">
         </figure>
 
 <br>
 
 <figure>
-<img src="./imgsrc/09_TCP.png" width="600">
+<img src="../imgsrc/09_TCP.png" width="600">
 </figure>

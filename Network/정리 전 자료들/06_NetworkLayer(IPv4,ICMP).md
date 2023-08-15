@@ -7,7 +7,7 @@
     - 데이터가 **정확하게 전달될 것을 보장하지 않는다.**
 2. IPv4 프로토콜의 구조<br>
         <figure>
-        <img src="./imgsrc/IPv4.PNG" width="550">
+        <img src="../imgsrc/IPv4.PNG" width="550">
         </figure>
     - Version (0.5): 4버젼이므로 (04)가 온다.
     - IHL (0.5): IP 헤더의 길이/4 (5~15)
@@ -30,14 +30,14 @@
     - 네트워크 컴퓨터 위에서 돌아가는 운영체제에서 **오류 메세지**를 전송받는 데 주로 쓰인다.
 2. ICMP 프로토콜의 구조<br>
         <figure>
-        <img src="./imgsrc/ICMP.PNG" width="500">
+        <img src="../imgsrc/ICMP.PNG" width="500">
         </figure>
     - Type, Code (1, 1): 오류 메세지의 대분류와 소분류
     - Checksum (2): 헤더 오류 검사용 코드
     - Others
 3. Type, Code<br>
         <figure>
-        <img src="./imgsrc/ICMP_TypeCode.PNG" width="500">
+        <img src="../imgsrc/ICMP_TypeCode.PNG" width="500">
         </figure>
     - 0, 8 : 응답, 요청
     - 3 : 경로상 요청 문제 (라우터 문제 등)
@@ -49,7 +49,7 @@
     - 다른 네트워크로 갈 때 어디로 보내야 하는지 설정되어 있음
     - 지도에 없을 경우 기본값으로 0.0.0.0, 게이트웨이로 보냄<br>
         <figure>
-        <img src="./imgsrc/RoutingTable.PNG" width="350">
+        <img src="../imgsrc/RoutingTable.PNG" width="350">
         </figure>
 
 ## 6-4. 다른 네트워크와 통신 과정
@@ -64,7 +64,7 @@
 3. 응답
     1. ...(요청과 유사)<br>
         <figure>
-        <img src="./imgsrc/NetworkLayerComm.PNG" width="450">
+        <img src="../imgsrc/NetworkLayerComm.PNG" width="450">
         </figure>
 
 ## 6-5. IPv4의 조각화
@@ -77,11 +77,11 @@
     2. IPv4 프로토콜 (20)로 캡슐화한 후 MTU 통과. (1500)
     3. MTU를 통과한 이후 이더넷(14) 프로토콜로 캡슐화하여 전송 (1514)<br>
         <figure>
-        <img src="./imgsrc/Fragmentation.PNG" width="400">
+        <img src="../imgsrc/Fragmentation.PNG" width="400">
         </figure>
 
 <br>
 
 <figure>
-<img src="./imgsrc/06_NetworkLayer(IPv4,ICMP).png" width="600">
+<img src="../imgsrc/06_NetworkLayer(IPv4,ICMP).png" width="600">
 </figure>s

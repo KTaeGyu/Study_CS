@@ -1,7 +1,7 @@
 ## 1. HTTP 프로토콜
 ### 웹을 만드는 기술들<br>
 <figure>
-<img src="../../imgsrc/Stacks_for_Web.PNG" width="400">
+<img src="../imgsrc/Stacks_for_Web.PNG" width="400">
 </figure>
 
 - HTTP : 웹 표준을 전송하는 프로토콜
@@ -14,7 +14,7 @@
 - TCP/IP 기반으로 되어있으며, 연결 상태를 유지하지 않는 비연결성 프로토콜이다. 따라서, 프로토콜이라**request**(요청) / **response**(응답) 방식으로 동작한다.
     - 클라이언트가 HTTP request를 서버에 보내면 서버는 HTTP response를 보내는 구조<br>
         <figure>
-        <img src="../../imgsrc/client server.png" width=350>
+        <img src="../imgsrc/client server.png" width=350>
         </figure>
 
 ### HTTP의 특징
@@ -54,7 +54,7 @@
 3. 서버에 의해 전송된 response를 읽는다
 4. 연결을 닫거나 다른 요청들을 위해 재사용된다<br>
     <figure>
-    <img src="../../imgsrc/HTTP_v1.1.PNG" width="300">
+    <img src="../imgsrc/HTTP_v1.1.PNG" width="300">
     </figure>
 
 ## 2. HTTP 요청 프로토콜
@@ -63,24 +63,24 @@
 ### HTTP 요청 프로토콜의 구조
 - **Request Line (중요!!)**, 헤더, 공백, 바디로 구성된다.<br>
     <figure>
-    <img src="../../imgsrc/HTTP_Request.PNG" width="150">
+    <img src="../imgsrc/HTTP_Request.PNG" width="150">
     </figure>
 - Request Line의 구조:<br>
     <figure>
-    <img src="../../imgsrc/HTTP_RequestLine.PNG" width="400"><br>
-    <img src="../../imgsrc/reqeust.png" width=400>
+    <img src="../imgsrc/HTTP_RequestLine.PNG" width="400"><br>
+    <img src="../imgsrc/reqeust.png" width=400>
     </figure>
 
 ### 요청 타입 
 - 요청 프로토콜의 가장 앞에 오는 Method type<br>
     <figure>
-    <img src="../../imgsrc/HTTP_RequestType.PNG" width="350">
+    <img src="../imgsrc/HTTP_RequestType.PNG" width="350">
     </figure>
 - GET : 클라이언트가 서버에게 데이터를 요청, 전송도 가능
 - POST : 클라이언트가 서버에 테이터를 전송, 요청도 가능
     - GET vs. POST : GET은 URI에 데이터를 포함시켜서 보내게 되고, POST는 BODY에 포함되어 되돌아온다. 즉, **데이터 보안**과 연관되어 있다.<br>
         <figure>
-        <img src="../../imgsrc/get post.png" width=500>
+        <img src="../imgsrc/get post.png" width=500>
         </figure>
 
 ### URI (Uniform Resource Identifier)
@@ -99,19 +99,19 @@
 ### HTTP 응답 프로토콜의 구조
 - **Status Line (중요!!)**, 헤더, 공백, 바디로 구성된다.<br>
     <figure>
-    <img src="../../imgsrc/HTTP_Response.PNG" width="150">
+    <img src="../imgsrc/HTTP_Response.PNG" width="150">
     </figure>
 - Status Line의 구조:
     <figure>
-    <img src="../../imgsrc/HTTP_ResponseLine.PNG" width="300"><br>
-    <img src="../../imgsrc/response.png" width=400>
+    <img src="../imgsrc/HTTP_ResponseLine.PNG" width="300"><br>
+    <img src="../imgsrc/response.png" width=400>
     </figure>
 
 ### 상태 코드
 - Status Line 중간에 오는 상태를 표시하는 코드들로, 보통 서버에서 설정해놓는다.<br>
     <figure>
-    <img src="../../imgsrc/HTTP_ResponseStatus.PNG" width="350"><br>
-    <img src="../../imgsrc/HTTP_ResponseStatusInDetail.PNG" width="350">
+    <img src="../imgsrc/HTTP_ResponseStatus.PNG" width="350"><br>
+    <img src="../imgsrc/HTTP_ResponseStatusInDetail.PNG" width="350">
     </figure>
 
 
@@ -119,19 +119,19 @@
 ### HTTP의 요청 헤더 vs 응답 헤더 구조
 - 일반, 요청, 응답, 항목 헤더로 나뉜다.<br>
     <figure>
-    <img src="../../imgsrc/HTTP_Header.PNG" width="400">
+    <img src="../imgsrc/HTTP_Header.PNG" width="400">
     </figure>
 1. 일반 헤더<br>
     <figure>
-    <img src="../../imgsrc/HTTP_HeaderGeneral.PNG" width="400">
+    <img src="../imgsrc/HTTP_HeaderGeneral.PNG" width="400">
     </figure>
 2. 요청 헤더<br>
     <figure>
-    <img src="../../imgsrc/HTTP_HeaderRequest.PNG" width="400">
+    <img src="../imgsrc/HTTP_HeaderRequest.PNG" width="400">
     </figure>
 3. 응답 헤더<br>
     <figure>
-    <img src="../../imgsrc/HTTP_HeaderResponse.PNG" width="400">
+    <img src="../imgsrc/HTTP_HeaderResponse.PNG" width="400">
     </figure>
 
 ## 5. HTTP 기반 시스템의 구성요소
@@ -139,7 +139,7 @@
 - 실제로는 브라우저와 요청을 처리하는 서버 사이에는 좀 더 많은 컴퓨터들이 존재한다. (ex. 라우터, 모뎀) 
 - 웹의 계층적인 설계로 이들은 네트워크와 전송 계층 내로 숨겨진다. HTTP은 애플리케이션 계층의 최상위에 있다.<br>
     <figure>
-    <img src="../../imgsrc/client-server-chain.png" width=550>
+    <img src="../imgsrc/client-server-chain.png" width=550>
     </figure>
 
 ### 구성요소

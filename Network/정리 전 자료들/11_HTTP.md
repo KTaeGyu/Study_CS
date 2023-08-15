@@ -27,7 +27,7 @@
   
   - 클라이언트가 HTTP request를 서버에 보내면 서버는 HTTP response를 보내는 구조
   
-  ![client-server](./imgsrc/client%20server.png)
+  ![client-server](../imgsrc/client%20server.png)
 
 ## 2. [구조](#목차)
 
@@ -37,12 +37,12 @@
   
   * ex. 구글 웹페이지로 접속을 하는 요청 - “구글 웹 페이지 띄워줘”
   
-  <img title="" src="./imgsrc/reqeust.png" alt="">
+  <img title="" src="../imgsrc/reqeust.png" alt="">
   
-  <img title="" src="./imgsrc/get post.png" alt="">
+  <img title="" src="../imgsrc/get post.png" alt="">
 * HTTP 응답
   
-  <img title="" src="./imgsrc/response.png" alt="">
+  <img title="" src="../imgsrc/response.png" alt="">
 
 ## 3. [http와 https의 차이점](#목차)
 
@@ -56,7 +56,7 @@
 
 * 웹의 계층적인 설계로 이들은 네트워크와 전송 계층 내로 숨겨진다. HTTP은 애플리케이션 계층의 최상위에 있다.
 
-<img title="" src="./imgsrc/client-server-chain.png" alt="">
+<img title="" src="../imgsrc/client-server-chain.png" alt="">
 
 * 구성요소
 1. 클라이언트 : 사용자 에이전트
@@ -173,8 +173,6 @@
 
 출처 : https://developer.mozilla.org/ko/docs/Web/HTTP/Overview\
 
-
-
-
-
 <span style='color:red'>안녕</span>
+
+<span style='color:skyblue'>수고했어..</span>

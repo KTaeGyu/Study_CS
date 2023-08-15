@@ -8,7 +8,7 @@
     - 일반적으로 오류의 검사와 수정이 필요 없는 프로그램에서 수행
 2. UDP 프로토콜의 구조<br>
         <figure>
-        <img src="./imgsrc/UDP.PNG" width="500">
+        <img src="../imgsrc/UDP.PNG" width="500">
         </figure>
     - 포트번호만 존재함.
 
@@ -16,19 +16,19 @@
 1. UDP 프로토콜을 사용하는 대표적인 프로그램들
     - DNS<br>
         <figure>
-        <img src="./imgsrc/DNS.PNG" width="300">
+        <img src="../imgsrc/DNS.PNG" width="300">
         </figure>
     - Tftp<br>
         <figure>
-        <img src="./imgsrc/Tftp.PNG" width="300">
+        <img src="../imgsrc/Tftp.PNG" width="300">
         </figure>
     - RIP 프로토콜<br>
         <figure>
-        <img src="./imgsrc/RIP_Protocol.PNG" width="300">
+        <img src="../imgsrc/RIP_Protocol.PNG" width="300">
         </figure>
 
 <br>
 
 <figure>
-<img src="./imgsrc/08_UDP.png" width="600">
+<img src="../imgsrc/08_UDP.png" width="600">
 </figure>

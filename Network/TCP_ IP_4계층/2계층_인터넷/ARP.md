@@ -1,4 +1,4 @@
-## 0. MAC 주소
+## 1. MAC 주소
 ### MAC 주소란?
 - MAC 주소는 데이터 링크 계층(Data Link Layer)에서사용되는 주소로, LAN(Local Address Network)에서 목적지와통신하기 위한 실질적인 주소이다.
 - 48bit의 16진수를 사용한다. (ex, 1A-2F-BB-76-09-AD)
@@ -12,7 +12,7 @@ MAC 주소(물리적 주소) = 주민번호
 - 같은 IP 주소더라도 MAC 주소가 다르다면 구별이 가능하다.
 - 그러나, 라우팅 테이블의 과부하를 막기 위해 IP 주소를 함께 이용하는 것이 좋다.<br><br>
 
-## 1. ARP 프로토콜
+## 2. ARP 프로토콜
 1. ARP가 하는 일
     - LAN 통신을 하기 위해 필요한 MAC 주소를 IP 주소를 이용해서 알아오는 프로토콜<br>
         <figure>
@@ -27,7 +27,7 @@ MAC 주소(물리적 주소) = 주민번호
     - Opcode (2): 요청(01)인지 혹은 응답(02)인지를 나타내는 코드
     - Source/Destination Hardware/Protocol Address (6, 6, 4, 4): 출발지/목적지의 MAC/IP 주소
 
-## 2. ARP 프로토콜의 통신 과정
+## 3. ARP 프로토콜의 통신 과정
 1. 요청
     1. ARP 요청 : 모르는 목적지 MAC 주소를 0- 으로 작성
     2. Ethernet 캡슐화 : 모르는 목적지 MAC 주소를 F- 로 작성하여 브로드캐스트 유도<br><br>
@@ -42,7 +42,7 @@ MAC 주소(물리적 주소) = 주민번호
         <img src="../../imgsrc/ARPComm.PNG" width="450">
         </figure>
 
-## 3. ARP 테이블
+## 4. ARP 테이블
 - 나와 통신했던 컴퓨터들을 일정 기간동안 ARP 테이블에 주소를 저장한다.<br>
     <figure>
     <img src="../../imgsrc/ARPCashtable.PNG" width="300">
