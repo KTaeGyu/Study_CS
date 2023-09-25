@@ -1,15 +1,7 @@
 #### [전체 목차로 돌아가기](../README.md)
 ## 목차
 
-1. [데이터의 접근](#1-데이터의-접근)
-2. [Race Condition](#2-race-condition)
-3. [Race Condition in OS](#3-race-condition-in-os)
-4. [Process Synchronization 문제](#4-process-synchronization-문제)
-5. [Race condition의 예시](#5-race-condition의-예시)
-6. [The Critical-Section Problem](#6-the-critical-section-problem)
-7. [프로그램적 해결법의 충족 조건](#7-프로그램적-해결법의-충족-조건)
-8. [Initial Attemps to Solve Provlem](#8-initial-attemps-to-solve-provlem)
-    1. [알고리즘 1](#8-1-알고리즘-1)
+
 
 # 1. Race Condition
 ## 1-1. 데이터의 접근
@@ -126,7 +118,7 @@
     <img src='../images/CriticalSectionAlgo2.PNG' width=400>
     </figure>
 
-- 상호 배제는 만족하지만, progress를 만족하지 않는다.
+- 의사표현을 기반으로 하기 때문에 상호 배제는 만족하지만, progress를 만족하지 않는다.
 - 오류 : 둘 다 2행까지 수행 후 끊임 없이 양보하는 상황 발생 가능
 
 ### 알고리즘3(Peterson's Algorithm)
@@ -134,10 +126,11 @@
     <fugure>
     <img src='../images/CriticalSectionAlgo3.PNG' width=400>
     </fugure>
-- 두 프로세스에서의 critical section 문제에서, 세 가지 조건을 모두 만족한다.
+- 의사표현을 한 프로세스에 한해 교대로 사용하는 방법, 세 가지 조건을 모두 만족한다.
 - Busy Waiting(=spin lock) : 계속 CPU와 memory를 쓰면서 wait (비효율적)
 
-## 2-4. Synchronization Hardware
+# 3. Semaphores
+## 3-1. Synchronization Hardware
 - 하드웨어적으로 Test & modify를 atomic하게 수행할 수 있도록 지원하는 경우 해결 가능하다.<br>
     <figure>
     <img src='../images/SynchronizationHardware1.PNG' width=200>
@@ -147,7 +140,7 @@
     <img src='../images/SynchronizationHardware.PNG' width=350>
     </figure>
 
-# 3. Semaphores
+## 3-2. Semaphores
 - 앞의 방식들을 추상화 시킨 것
 - 추상 자료형 : 구현에 대한 논의보단, Object와 Operation(정의)로 구성되는 자료형
 - Semaphore S
@@ -157,11 +150,12 @@
         <img src='../images/Semaphores.PNG' width=450>
         </figure>
 
-## 3-1. Block / Wakeup Implementation
-### Critical Section of n Processes<br>
-    <figure>
-    <img src='../images/CriticalSectionSemaphore.PNG' width=500>
-    </figure>
+## 3-3. Block / Wakeup Implementation
+### Critical Section of n Processes
+<figure>
+<img src='../images/CriticalSectionSemaphore.PNG' width=500>
+</figure>
+
 - Busy-wait는 비효율적이므로, Block & Wakeup 방식으로 구현한다.
 
 ### Block / Wakeup Implementation
@@ -181,15 +175,16 @@
     <figure>
     <img src='../images/BlockWakeupPV.PNG' width=450>
     </figure>
+- 대기할 때 세마포어를 음수로 감소시키며 Block 되고, 연산을 마칠 때 세마포어가 음수라면 대기열 중 하나를 깨움
 
-## 3-2. 비교
+## 3-4. 비교
 ### Busy-wait vs. Block/wakeup
 - Block/wakeup overhead vs. Critical section 길이
     - Critical section의 길이가 긴 경우(경쟁이 심한 경우) Block/Wakeup이 적당하다.
     - Critical section의 길이가 짧은 경우(경쟁이 적은 경우) Block/Wakeup의 오버헤드가 커질 수 있다.
     - 일반적으로는 Block/Wakeup이 적당한 경우가 많다.
 
-## 3-3. Semaphores Types
+## 3-5. Semaphores Types
 - Counting semaphore
     - 도메인이 0 이상인 임의의 정수값
     - 주로 resource counting에 사용
@@ -197,16 +192,18 @@
     - 0 또는 1의 값만 가질 수 있는 semaphore
     - 주로 상호 배제(lock/unlock)에 사용
 
-## 4-4. Deadlock and Starvation
+# 4. Problems
+## 4-1. Deadlock and Starvation
 - Deadlock : 둘 이상의 프로세스가 서로 상대방에 의해 충족될 수 있는 event를 무한히 기다리는 현상
     - S와 Q가 1로 초기화된 Semaphore에서,<br>
         <figure>
-        <img src='../images/Deadlock.PNG' width=500>
+        <img src='../images/Deadlock.PNG' width=400>
         </figure>
 - Starvation(=Indefinite blocking) : 프로세스가 suspend된 이유에 해당하는 세마포어 큐에서 빠져나갈 수 없는 현상
+- 해결 방법 : 자원을 얻는 순서를 미리 정의해주도록 함
 
-# 4. Classical Problems of Synchronization
-## 4-1. Bounded-Buffer Problem(Producer-Consumer Problem)
+## 4-2. Classical Problems of Synchronization
+### 4-2-1. Bounded-Buffer Problem(Producer-Consumer Problem)
 <figure>
 <img src='../images/BoundedBufferProblem.PNG' width=600>
 </figure>
@@ -220,27 +217,74 @@
         <img src='../images/BoundedBufferProblem2.PNG' width=500>
         </figure>
 
-## 4-2. Readers-Writers Problem
+### 4-2-2. Readers-Writers Problem
 - 한 프로세스가 DB에 Write 중일 때는 다른 프로세스가 접근하면 안되고, Read는 동시에 여럿이 접근해도 된다.
 - 해결책
     - Writer가 DB에 접근 허가를 아직 얻지 못한 상태에서는 모든 대기중인 Reader들을 다 DB에 접근하게 해준다.
     - Writer는 대기중인 Reader가 하나도 없을 때 DB 접근이 허용된다.
     - 일단 Writer가 DB에 접근 중이면 Reader들은 접근이 금지된다.
     - Writer가 DB에서 빠져나가야만 Reader의 접근이 허용된다.<br><br>
-- Shared Data (DB 자체)
+- Shared Data
     ```C
-    readcount; /*현재 DB에 접근 중인 Reader의 수*/
+    DB 자체
+    readcount; /* 현재 DB에 접근 중인 Reader의 수 */
     ```
 - Synchronization variables
     ```C
-    mutex /*공유 변수 readcount를 접근하는 코드(critical section)의 상호 배제 보장을 위해 사용*/
-    db /*Reader와 Writer가 공유 DB 자체를 올바르게 접근하게 하는 역할*/
+    mutex /* 공유 변수 readcount를 접근하는 코드(critical section)의 상호 배제 보장을 위해 사용 */
+    db /* Reader와 Writer가 공유 DB 자체를 올바르게 접근하게 하는 역할 */
     ```
 
 <figure>
 <img src='../images/ReadersWritersProblem.PNG' width=500>
 </figure>
 
-## 4-3. Dining-Philosophers Problem
+- 시간에 대한 접근 권한을 주어 기아 현상 해결 가능
+
+### 4-2-3. Dining-Philosophers Problem
+
+<figure>
+<img src='../images/DininhPhilosophersProblem.PNG' width=500>
+</figure>
+
+- 문제점
+    - Deadlock 가능성(모든 철학자가 동시에 배가 고파져 왼쪽 젓가락을 집어버린 경우)
+- 해결 방안
+    1. 4명의 철학자만이 테이블에 동시에 앉을 수 있도록 한다
+    2. 젓가락을 두 개 모두 집을 수 있을 때만 젓가락을 집을 수 있게 한다
+    3. 비대칭(짝수/홀수 철학자는 왼쪽/오른쪽 젓가락부터 집도록)
+
+
+<figure>
+<img src='../images/DininhPhilosophersProblem1.PNG' width=300><br>
+<img src='../images/DininhPhilosophersProblem2.PNG' width=150><br>
+<img src='../images/DininhPhilosophersProblem3.PNG' width=300>
+</figure>
 
 # 5. Monitor
+- Semaphore의 문제점
+    - 코딩이 어렵다.
+    - 정확성의 입증이 어렵다
+    - 자발적 협력이 필요하다.
+    - 한번의 실수가 모든 시스템에 치명적인 영향을 끼친다.<br>
+<figure>
+<img src='../images/Monitor.PNG' width=300>
+</figure>
+
+## 5-1. Monitor
+- 동시 수행중인 프로세스 사이에서 absract data type의 안전한 공유를 보장하기 위한 high-level synchronization construct<br>
+    <figure>
+    <img src='../images/MonitorScheme.PNG' width=400>
+    </figure>
+- Monitor Code<br>
+    <figure>
+    <img src='../images/MonitorCode.PNG' width=200>
+    </figure>
+
+<img src='../images/Monitor_1.PNG'>
+
+### Bounded-Buffer
+<img src='../images/Monitor_2.PNG'>
+
+### Dining Philosophers
+<img src='../images/Monitor_3.PNG'>
