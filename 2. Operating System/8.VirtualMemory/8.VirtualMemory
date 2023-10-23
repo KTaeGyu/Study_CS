@@ -1,6 +1,87 @@
-# Virtual Memory
+## [가상 메모리 #1](https://core.ewha.ac.kr/publicview/C0101020140509142939477563?vmode=f)
 
 ### Demand Paging
 
+- 프로그램이 실행될 때 메모리에 필요한 데이터를 필요한 시점에 로드하는 방식
 
-### 
+### Page Fault
+
+Demand Paging 방식에서 발생할 수 있는 단점.
+
+1) 요청한 페이지가 메모리에 없을 때
+- 프로세스가 실행 중, 특정 페이지에 접근하려고 할 때 해당 페이지가 현재 메모리에 로드 되어 있지 않으면 발생
+
+2) 보호 위반 또는 유효하지 않은 접근
+- 프로세스가 메모리의 접근 권한이 없는 페이지에 접근
+
+=========================================
+
+페이지 부재시, 페이지 교체 알고리즘이 있음.
+
+Optimal, FIFO, LRU, LFU 알고리즘
+
+==========================================
+
+### Optimal Algorithm
+
+- 페이지 교체 알고리즘 중 하나
+- 페이지 부재가 발생하고 페이지를 교체해야할 때, optimal algorithm을 사용하면 미래에 사용될 페이지 중에서 가장 먼저 필요한 페이지를 선택.
+[단점] 미래 페이지 참조를 미리 알아야하는데 실제로는 불가능.
+
+### FIFO(First In First Out) Algorithm
+
+- 페이지 교체 알고리즘 중 하나
+- 페이지 부재가 발생할 때 메모리에서 가장 먼저 적재된 페이지를 교체
+[단점] 성능이 좋지 않음.
+
+### LRU(Least Recently Used) Algorithm
+
+- 페이지 교체 알고리즘 중 하나.
+- 가장 오래 전에 사용된 페이지를 교체 대상으로 선택
+[단점] 추가 비용 필요, 대량의 페이지 프레임을 다루는 경우 메모리 및 성능 오버헤드 발생.
+
+### LFU(Least Frequently Used) Algorithm
+
+- 
+
+### LRU와 LFU 알고리즘의 예제 및 구현
+
+- 
+
+## [가상 메모리 #2](https://core.ewha.ac.kr/publicview/C0101020140513133424380501?vmode=f)
+
+### 다양한 캐슁 환경
+
+- 
+
+### Clock Algorithm
+
+- 
+
+### Page Frame의 Allocation
+
+- 
+
+### Global vs. Local Replacement
+
+- 
+
+### Thrashing
+
+- 
+
+### Working-Set Model
+
+- 
+
+### Working-Set Algorithm
+
+- 
+
+### PFF(Page-Fault Frequency) Scheme
+
+- 
+
+### Page Size의 결정
+
+-
